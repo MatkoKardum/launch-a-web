@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSpring } from '@react-spring/web'
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -14,14 +15,59 @@ export default function App() {
         setDarkMode(prevState => !prevState);
   }
 
+  const fromTop = useSpring({
+    config: {mass:1, tension:1500, friction:200 },
+    from: { y: -100, opacity: 0, },
+    to: { y: 0, opacity: 1 },  
+  }) 
+
+  const fromBottom = useSpring({
+    config: {mass:1, tension:500, friction:118},
+    from: { y: 100, opacity: 0, },
+    to: { y: 0, opacity: 1 },  
+  }) 
+
+  const fromLeft = useSpring({
+    config: {mass:1, tension:500, friction:118},
+    from: { x: -100, opacity: 0, },
+    to: { x: 0, opacity: 1 },  
+  })
+
+const fromRight = useSpring({
+    config: {mass:1, tension:500, friction:118},
+    from: { x: 100, opacity: 0, },
+    to: { x: 0, opacity: 1 },  
+  }) 
+
+  const animateFromTop = {
+    overflow: "hidden",
+    ...fromTop
+  }
+
+  const animateFromBottom = {
+    overflow: "hidden",
+    ...fromBottom
+  }
+
+
+const animateFromLeft = {
+    overflow: "hidden",
+    ...fromLeft,
+}
+
+const animateFromRight = {
+    overflow: "hidden",
+    ...fromRight,
+}
+
   return (
     <div className="page">
-      <Navbar toggleMode={toggleMode} darkMode={darkMode} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
+      <Navbar toggleMode={toggleMode} darkMode={darkMode} animateFromLeft={animateFromLeft} animateFromRight={animateFromRight} />
+      <Hero darkMode={darkMode} animateFromBottom={animateFromBottom} animateFromTop={animateFromTop} />
+      <About darkMode={darkMode} animateFromTop={animateFromTop} animateFromLeft={animateFromLeft} animateFromRight={animateFromRight} animateFromBottom={animateFromBottom} />
+      <Projects darkMode={darkMode} animateFromBottom={animateFromBottom} />
+      <Skills darkMode={darkMode} animateFromTop={animateFromTop} />
+      <Contact darkMode={darkMode} animateFromTop={animateFromTop} animateFromBottom={animateFromBottom} />
       <Footer darkMode={darkMode} />
     </div>
   )

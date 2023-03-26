@@ -1,4 +1,5 @@
 import project from "../assets/project.png"
+import { animated } from '@react-spring/web'
 
 export default function Projects(props) {
 
@@ -7,7 +8,7 @@ export default function Projects(props) {
     }
 
     return (
-        <section className={props.darkMode ? "projects projects--dark" : "projects"} id="projects" >
+        <animated.section style={props.animateFromBottom} className={props.darkMode ? "projects projects--dark" : "projects"} id="projects" >
             <div className="project">
                 <img src={project} alt="project" className="project--img" />
                 <div className="project--overlay">
@@ -50,6 +51,6 @@ export default function Projects(props) {
                     <button className="project--btn">Click to view</button>
                 </div>
             </div>
-        </section>
+        </animated.section>
     )
 }
