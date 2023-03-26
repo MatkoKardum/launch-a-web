@@ -1,8 +1,10 @@
 import { animated } from '@react-spring/web'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function Skills(props) {
     return (
-        <animated.section style={props.animateFromTop} className={props.darkMode ? "skills skills--dark" : "skills"} id="skills" >
+        <AnimationOnScroll animateOnce={true} animateIn="animate__zoomInUp">
+        <section className={props.darkMode ? "skills skills--dark" : "skills"} id="skills" >
             <h2 className="skills--title">My Skills</h2>
             <div className="skills--wrapper">
                 <div className={props.darkMode ? "skill skill--dark" : "skill"}>HTML</div>
@@ -16,6 +18,7 @@ export default function Skills(props) {
                 <div className={props.darkMode ? "skill skill--dark" : "skill"}>Vite</div>
                 <div className={props.darkMode ? "skill skill--dark" : "skill"}>Parcel</div>
             </div>
-        </animated.section>
+        </section>
+        </AnimationOnScroll>
     )
 }

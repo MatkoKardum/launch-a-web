@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSpring } from '@react-spring/web'
 import { useMediaQuery } from 'react-responsive'
+import "animate.css/animate.min.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -79,20 +80,16 @@ const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
         animateFromTop={animateFromTop} />
       <About
         darkMode={darkMode} 
-        animateFromTop={animateFromTop} 
-        animateFromLeft={animateFromLeft} 
-        animateFromRight={animateFromRight} 
-        animateFromBottom={animateFromBottom} />
+      />
       <Projects 
         darkMode={darkMode} 
-        animateFromBottom={animateFromBottom} />
+      />
       <Skills
         darkMode={darkMode} 
-        animateFromTop={animateFromTop} />
+      />
       <Contact
         darkMode={darkMode} 
-        animateFromTop={animateFromTop} 
-        animateFromBottom={animateFromBottom} />
+      />
       <Footer darkMode={darkMode} />
     </div>
   )
