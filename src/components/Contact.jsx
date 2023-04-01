@@ -3,7 +3,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function Contact(props) {
     return (
-        <AnimationOnScroll animateOnce={true} animateIn="animate__flipInX">
+        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUpBig" duration={0.5} delay={500}>
             <section className={props.darkMode ? "contact contact--dark" : "contact"} id="contact" >
                 <h2 className="contact--title">Contact me</h2>
                 <form className="contact--form">

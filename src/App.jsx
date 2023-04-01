@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSpring } from '@react-spring/web'
 import { useMediaQuery } from 'react-responsive'
 import "animate.css/animate.min.css";
@@ -13,8 +13,15 @@ import Footer from "./components/Footer";
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
+  useEffect(() => {
+    setDarkMode(JSON.parse(localStorage.getItem("darkMode")));
+  }, [])
+
   function toggleMode() {
-        setDarkMode(prevState => !prevState);
+    setDarkMode(prevState => {
+      localStorage.setItem("darkMode", !prevState);
+      return !prevState
+    });
   }
 
   const fromTop = useSpring({
