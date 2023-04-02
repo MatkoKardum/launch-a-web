@@ -82,6 +82,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
         isDesktop={isDesktop}
         isMobile={isMobile} />
       <Hero
+        isDesktop={isDesktop}
         darkMode={darkMode} 
         animateFromBottom={animateFromBottom} 
         animateFromTop={animateFromTop} />

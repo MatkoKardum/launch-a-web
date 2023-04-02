@@ -71,6 +71,18 @@ body {
   text-decoration: none;
 }
 
+.nav--link--dark > a {
+  color: white;
+}
+
+.bm-item.nav--link {
+  margin-right: 0;
+}
+
+.nav--dark.bm-item.nav--link > a {
+  color: white;
+}
+
 .green {
   color: #03F96E;
 }
@@ -107,6 +119,8 @@ body {
 .hide {
   display: none;
 }
+
+
 
 /* HERO/LANDING */
 
@@ -247,6 +261,10 @@ body {
   color: white;
 }
 
+.project--btn:hover {
+  cursor: pointer;
+}
+
 .projects--dark > .project--btn {
   background-color: white;
   color: black;
@@ -281,6 +299,11 @@ body {
 .about--icon {
   margin-right: 15px;
   font-size: 3rem;
+}
+
+.about--icon:hover {
+  transition: .3s all;
+  color: #03F96E;
 }
 
 .icons {
