@@ -67,7 +67,8 @@ export default function Menju(props) {
           height: "100vh",
           position: "absolute",
           top: "0",
-          left: "0"
+          left: "0",
+          display: isOpen ? 'block' : 'none'
         },
       }
 
