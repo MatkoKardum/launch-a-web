@@ -1,10 +1,5 @@
-import { animated } from '@react-spring/web'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-
-
 
 export default function About(props) {
     return (
@@ -32,9 +27,10 @@ export default function About(props) {
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} animateIn="animate__bounceInUp" >
                 <div className="about--icons">
-                    <a href="https://github.com/MatkoKardum" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaGithub className="about--icon" /></a>
-                    <a href="https://github.com/MatkoKardum" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaLinkedin className="about--icon" /></a>
-                    <a href="https://github.com/MatkoKardum" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaTwitter className="about--icon" /></a>
+                    <a href="https://twitter.com/LaunchAWeb56910" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaTwitter className="about--icon" /></a>
+                    <a href="https://www.tiktok.com/@launchaweb" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaTiktok className="about--icon" /></a>
+                    <a href="https://www.instagram.com/launchaweb/" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaInstagram className="about--icon" /></a>
+                    <a href="https://www.facebook.com/LaunchAWeb/" target="_blank" className={props.darkMode ? "icons icons--dark" : "icons"}><FaFacebook className="about--icon" /></a>
                 </div >
             </AnimationOnScroll>
         </section>

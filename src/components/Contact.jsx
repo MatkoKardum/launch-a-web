@@ -1,4 +1,3 @@
-import { animated } from '@react-spring/web'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function Contact(props) {
