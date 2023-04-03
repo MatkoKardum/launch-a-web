@@ -27,7 +27,7 @@ export default function Menju(props) {
         bmCrossButton: {
           height: '24px',
           width: '24px',
-          margin: "10px 10px"
+          margin: "20px 20px"
         },
         bmCross: {
           background: 'transparent'

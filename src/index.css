@@ -468,8 +468,21 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
+  .hero--wrapper {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
   .globe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0.2;
+  }
+  
+  .nav {
+    padding: 20px;
   }
   
   .nav--logo {
