@@ -19,6 +19,7 @@
 	border: 1px solid #03F96E;
 
 	overflow: hidden;
+	transition: all .5s;
 }
 
 .pace .pace-progress {
@@ -27,13 +28,13 @@
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-
+	
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	-o-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-
+	
 	max-width: 200px;
 	position: fixed;
 	z-index: 2000;
@@ -44,8 +45,10 @@
 	height: 100%;
 	width: 100%;
 	background: #03F96E;
+	transition: all .5s;
 }
 
 .pace.pace-inactive {
 	display: none;
+	transition: all .5s;
 }

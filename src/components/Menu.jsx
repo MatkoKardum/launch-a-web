@@ -15,10 +15,6 @@ export default function Menju(props) {
       setOpen(false)
     }
 
-    const toggleIsOpen = () => {
-        setOpen(prevOpen => !prevOpen)
-    }
-
     const styles = {
         bmBurgerButton: {
           width: '24px',

@@ -137,6 +137,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-left: 100px;
+  z-index: 100;
 }
 
 .globe {
@@ -151,6 +152,7 @@ body {
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: 1;
 }
 
 .globe > img {
@@ -458,6 +460,89 @@ body {
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 1100px) {
+  .projects {
+    padding: 20px;
+    row-gap: 20px;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .globe {
+    opacity: 0.2;
+  }
+  
+  .nav--logo {
+    font-size: 1rem;
+  }
+  
+  .hero--heading {
+    font-size: 1.3rem;
+  }
+
+  .hero--btn {
+    padding: 5px 25px;
+    font-size: 1rem;
+  }
+
+  .about--title {
+    font-size: 1.3rem;
+  }
+
+  .about {
+    padding: 0 50px;
+  }
+
+  .about--text {
+    font-size: 0.5rem;
+  }
+
+  .about--icon {
+    font-size: 1rem;
+  }
+
+  .skills--wrapper {
+    grid-template-columns: 1fr;
+    font-size: 0.8rem;
+  }
+
+  .skill {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .skills--title {
+    font-size: 1.3rem;
+  }
+
+  .contact--title {
+    font-size: 1.3rem;
+  }
+
+  .contact--name, .contact--email, .contact--message, .contact--btn {
+    width: 60%;
+    max-width: 60%;
+  }
+
+  .contact--message {
+    min-width: 60%;
+    max-width: 60%;
+  }
+
+  .contact--name::placeholder, .contact--email::placeholder, .contact--message::placeholder {
+    font-size: 0.6rem;
+  }
+
+  .contact--btn {
+    font-size: 1rem;
+  }
+
+  .footer--text {
+    font-size: 0.8rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   /* hide element on small screens */
   .nav--logo {
@@ -466,6 +551,10 @@ body {
 
   .hero--heading {
     font-size: 1.3rem;
+  }
+
+  .globe {
+    opacity: 0.2;
   }
 
   .hero--btn {

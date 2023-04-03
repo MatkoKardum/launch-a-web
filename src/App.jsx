@@ -71,8 +71,9 @@ const animateFromRight = {
     ...fromRight,
 }
 
-const isDesktop = useMediaQuery({ query: '(min-width: 480px)' })
+const isDesktop = useMediaQuery({ query: '(min-width: 1100px)' })
 const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
+const isMobileResponsive = useMediaQuery({query: '(max-width: 1100px)'})
 
   return (
     <div className="page">
@@ -82,7 +83,8 @@ const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
         animateFromLeft={animateFromLeft} 
         animateFromRight={animateFromRight}
         isDesktop={isDesktop}
-        isMobile={isMobile} />
+        isMobile={isMobile}
+        isMobileResponsive={isMobileResponsive} />
       <Hero
         isDesktop={isDesktop}
         darkMode={darkMode} 

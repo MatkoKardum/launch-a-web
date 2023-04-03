@@ -8,12 +8,6 @@ import Menju from './Menu'
 import { useState } from 'react'
 
 export default function Navbar(props) {
-        const [isOpen, setIsOpen] = useState(false);
-
-        function toggleIsOpen() {
-
-        }
-
         return (
         <nav className={props.darkMode ? "nav nav--dark" : "nav"}>
             {/* <animated.span style={props.animateFromLeft} className="nav--logo">Matej Kardum</animated.span> */}
@@ -28,7 +22,7 @@ export default function Navbar(props) {
             <animated.div className="mode--switch" style={props.animateFromRight}><BsFillSunFill style={props.animateFromRight} onClick={props.toggleMode} /></animated.div>
             : <animated.div className="mode--switch" style={props.animateFromRight}><BsFillMoonStarsFill style={props.animateFromRight} onClick={props.toggleMode} /></animated.div>
             }
-            {props.isMobile && <Menju onClick={toggleIsOpen} darkMode={props.darkMode} style={props.animateFromLeft} />}
+            {(props.isMobile || props.isMobileResponsive) && <Menju darkMode={props.darkMode} style={props.animateFromLeft} />}
         </nav>
     )
 }
