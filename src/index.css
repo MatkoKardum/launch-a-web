@@ -448,6 +448,13 @@ body {
   color: black;
 }
 
+.hidden {
+  display: none;
+}
+
+.spinner {
+  height: 100vh;
+}
 
 /* RESPONSIVE */
 

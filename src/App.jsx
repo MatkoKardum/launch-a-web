@@ -9,6 +9,8 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { Dna } from 'react-loader-spinner';
+
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -98,7 +100,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
       <Contact
         darkMode={darkMode} 
       />
-      <Footer darkMode={darkMode} />
+      <Footer darkMode={darkMode} />  
     </div>
   )
 }
